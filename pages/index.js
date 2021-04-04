@@ -1,6 +1,6 @@
 import Layout from '../components/Block/Layout';
 import HeroBanner from '../components/Common/HeroBanner/Hero';
-import Portfolios from './portfolios';
+import {PortfolioItems} from './portfolios';
 
  const Home =() =>{
     return (
@@ -9,7 +9,7 @@ import Portfolios from './portfolios';
          <HeroBanner/>
         <div className="container">
           {/* HOME PAGE STARTS */}
-          <Portfolios/>
+          <PortfolioItems/>
           <section className="section-title">
             <div className="px-2">
               <div className="pt-5 pb-4">
