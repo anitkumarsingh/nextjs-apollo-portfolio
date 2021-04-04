@@ -1,5 +1,6 @@
 import Layout from '../components/Block/Layout';
 import HeroBanner from '../components/Common/HeroBanner/Hero';
+import Portfolios from './portfolios';
 
  const Home =() =>{
     return (
@@ -8,6 +9,7 @@ import HeroBanner from '../components/Common/HeroBanner/Hero';
          <HeroBanner/>
         <div className="container">
           {/* HOME PAGE STARTS */}
+          <Portfolios/>
           <section className="section-title">
             <div className="px-2">
               <div className="pt-5 pb-4">
@@ -54,178 +56,6 @@ import HeroBanner from '../components/Common/HeroBanner/Hero';
           </section>
           <a href="" className="btn btn-main bg-blue ttu">See More Posts</a>
           {/* HOME PAGE ENDS */}
-         
-          {/* TOPICS PAGE STARTS */}
-          <section className="section-title">
-            <div className="px-2">
-              <div className="pt-5 pb-4">
-                <h1>Specific Category</h1>
-              </div>
-            </div>
-          </section>
-          <section className="fj-topic-list">
-            <table className="table table-hover ">
-              <thead>
-                <tr>
-                  <th scope="col">Topic</th>
-                  <th scope="col">Category</th>
-                  <th scope="col">Author</th>
-                  <th scope="col">Replies</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Some Topic Info</th>
-                  <td className="category">General Discussion</td>
-                  <td>Anit Kumar</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <th>Some Topic Info</th>
-                  <td className="category">General Discussion</td>
-                  <td>Anit Kumar</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <th>Some Topic Info</th>
-                  <td className="category">General Discussion</td>
-                  <td>Anit Kumar</td>
-                  <td>2</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          {/* TOPICS PAGE ENDS */}
-          {/* POSTS PAGE STARTS */}
-          <section className="section-title">
-            <div className="px-2">
-              <div className="pt-5 pb-4">
-                <h1>Specific Topic</h1>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div className="fj-post-list">
-              <div className="row">
-                <div className="col-md-9">
-                  <div className="topic-post">
-                    <article>
-                      <div className="row">
-                        <div className="topic-avatar">
-                          <div className="main-avatar">
-                            <img
-                              className="avatar subtle-shadow"
-                              src="https://i.imgur.com/cVDadwb.png"></img>
-                          </div>
-                        </div>
-                        <div className="topic-body">
-                          <div className="topic-header">
-                            <div className="topic-meta">
-                              <div className="name-container">
-                                <span className="name">Anit Kumar</span>
-                              </div>
-                              <div className="date-container"><span className="date">21h</span></div>
-                            </div>
-                          </div>
-                          <div className="topic-content">
-                            <div className="cooked">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            </div>
-                            <section className="post-menu-area">
-                              <nav className="post-controls">
-                                <div className="actions">
-                                  <button className="btn">reply</button>
-                                </div>
-                              </nav>
-                            </section>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-9">
-                  <div className="topic-post">
-                    <article>
-                      <div className="row">
-                        <div className="topic-avatar">
-                          <div className="main-avatar">
-                            <img
-                              className="avatar subtle-shadow"
-                              src="https://i.imgur.com/cVDadwb.png"></img>
-                          </div>
-                        </div>
-                        <div className="topic-body">
-                          <div className="topic-header">
-                            <div className="topic-meta">
-                              <div className="name-container">
-                                <span className="name">Anit Kumar</span>
-                              </div>
-                              <div className="date-container"><span className="date">21h</span></div>
-                            </div>
-                          </div>
-                          <div className="topic-content">
-                            <div className="cooked">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            </div>
-                            <section className="post-menu-area">
-                              <nav className="post-controls">
-                                <div className="actions">
-                                  <button className="btn">reply</button>
-                                </div>
-                              </nav>
-                            </section>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-9">
-                  <div className="topic-post">
-                    <article>
-                      <div className="row">
-                        <div className="topic-avatar">
-                          <div className="main-avatar">
-                            <img
-                              className="avatar subtle-shadow"
-                              src="https://i.imgur.com/cVDadwb.png"></img>
-                          </div>
-                        </div>
-                        <div className="topic-body">
-                          <div className="topic-header">
-                            <div className="topic-meta">
-                              <div className="name-container">
-                                <span className="name">Anit Kumar</span>
-                              </div>
-                              <div className="date-container"><span className="date">21h</span></div>
-                            </div>
-                          </div>
-                          <div className="topic-content">
-                            <div className="cooked">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            </div>
-                            <section className="post-menu-area">
-                              <nav className="post-controls">
-                                <div className="actions">
-                                  <button className="btn">reply</button>
-                                </div>
-                              </nav>
-                            </section>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          {/* POSTS PAGE ENDS */}
         </div>
     
         {/* REPLIER STARTS */}
