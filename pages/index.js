@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from '../components/Block/Layout';
 import HeroBanner from '../components/Common/HeroBanner/Hero';
 

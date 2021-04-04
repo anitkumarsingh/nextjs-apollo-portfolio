@@ -1,4 +1,4 @@
-import Layout from '../components/Block/Layout'
+import Layout from '../../components/Block/Layout';
 
  const Portfolios = () =>{
     return (

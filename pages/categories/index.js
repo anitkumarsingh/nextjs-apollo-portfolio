@@ -1,5 +1,4 @@
-import React from 'react';
-import Layout from '../components/Block/Layout';
+import Layout from '../../components/Block/Layout';
 
  const Categories = () =>{
     return (
