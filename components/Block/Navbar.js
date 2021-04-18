@@ -1,42 +1,44 @@
 import React from 'react';
+import {Navbar,Nav} from 'react-bootstrap';
+import Link from 'next/link';
 
-const Navbar =() =>{
+const Navigationbar =() =>{
     return (
         <>
-          <div className="navbar-wrapper">
-            <nav className="navbar navbar-expand-lg navbar-dark fj-mw9">
-              <a className="navbar-brand mr-3 font-weight-bold" href="#">Anit</a>
-              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
-      
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav">
-                  <li className="nav-item mr-3">
-                    <a className="nav-link" href="#">Portfolio</a>
-                  </li>
-                  <li className="nav-item mr-3">
-                    <a className="nav-link" href="#">Courses</a>
-                  </li>
-                  <li className="nav-item mr-3">
-                    <a className="nav-link" href="#">Cv</a>
-                  </li>
-                  <li className="nav-item mr-3">
-                    <a className="nav-link" href="#">Ask me</a>
-                  </li>
-                </ul>
-                <ul className="navbar-nav ml-auto">
-                  <li className="nav-item mr-3">
-                    <a className="nav-link" href="#">Sign Up</a>
-                  </li>
-                  <li className="nav-item mr-3">
-                    <a className="nav-link btn btn-success bg-green-2 bright" href="#">Sign In</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-         </div>
+          <Navbar  expand="lg" className="navbar-wrapper navbar navbar-expand-lg navbar-dark fj-mw9 ">
+            <Link href="/">
+            <a className="navbar-brand mr-3 font-weight-bold" >Anit</a>
+            </Link>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+                  <Link className="nav-item mr-3" href="/portfolios">
+                    <a className="nav-link">
+                      Portfolio
+                    </a>
+                  </Link>
+                  <Link className="nav-item mr-3" href="/resume">
+                    <a className="nav-link">
+                      Resume
+                    </a>
+                  </Link>
+                  <Link className="nav-item mr-3" href="/forum/categories">
+                    <a className="nav-link">
+                    Ask Me
+                    </a>
+                  </Link>
+            </Nav>
+            <Nav>
+                <Link className="nav-item mr-3" href="/login">
+                    <a className="nav-link" >Sign Up</a>
+                </Link>
+                <Link className="nav-item mr-3" href="/login">
+                <a className="nav-link btn btn-success bg-green-2 bright" >Sign In</a>
+                </Link>
+            </Nav>
+            </Navbar.Collapse>
+          </Navbar>
         </>
     )
 }
-export default Navbar;
+export default Navigationbar;
