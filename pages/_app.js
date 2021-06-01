@@ -1,5 +1,6 @@
 import 'bootstrap/scss/bootstrap.scss';
 import '../styles/index.scss';
+
 import App from 'next/app';
 
 const MyApp = ({ Component, pageProps }) => {
