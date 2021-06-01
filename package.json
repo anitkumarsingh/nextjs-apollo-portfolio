@@ -6,7 +6,25 @@
   "scripts": {
     "dev": "nodemon server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "lint": "eslint '*/**/*.{js,jsx}' --quiet --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix -f git-log",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx}/": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{js,css,md}": "prettier --write"
   },
   "repository": {
     "type": "git",
@@ -30,6 +48,14 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-formatter-git-log": "^0.5.3",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "lint-staged": "^10.2.11",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
   }
 }
