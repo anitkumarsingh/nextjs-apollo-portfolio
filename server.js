@@ -8,9 +8,6 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-const { Portfolios } = require('./mock/data');
-console.log(Portfolios);
-
 const data = [
   {
     _id: 'asd213ad23s',
@@ -52,12 +49,14 @@ app.prepare().then(() => {
     }
     type Query {
       portfolios:[Portfolios]
+      portfolio:Portfolios
     }
   `);
 
   const root = {
     hello: () => 'Hello world!',
-    portfolios: () => data
+    portfolios: () => data,
+    portfolio: () => data[0]
   };
   server.use(
     '/graphql',
