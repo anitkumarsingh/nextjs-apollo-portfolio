@@ -26,7 +26,7 @@ module.exports = {
     'plugin:react-hooks/recommended'
   ],
   rules: {
-    'no-console': 'error',
+    'no-console': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'simple-import-sort/sort': 'error',
