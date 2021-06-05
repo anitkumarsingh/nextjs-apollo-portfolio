@@ -15,7 +15,7 @@ const Categories = () => {
           <div className="row">
             <div className="col-md-4">
               <div className="fj-category-container">
-                <a className="fj-category subtle-shadow no-border" href="#">
+                <a className="fj-category subtle-shadow no-border" href="#/">
                   {
                     // <div className="category-icon">
                     //   <img src="images/pen.png" />
@@ -30,7 +30,7 @@ const Categories = () => {
             </div>
             <div className="col-md-4">
               <div className="fj-category-container">
-                <a className="fj-category subtle-shadow no-border" href="#">
+                <a className="fj-category subtle-shadow no-border" href="#/">
                   {
                     // <div className="category-icon">
                     //   <img src="images/pen.png" />
@@ -45,7 +45,7 @@ const Categories = () => {
             </div>
             <div className="col-md-4">
               <div className="fj-category-container">
-                <a className="fj-category subtle-shadow no-border" href="#">
+                <a className="fj-category subtle-shadow no-border" href="#/">
                   {
                     // <div className="category-icon">
                     //   <img src="images/pen.png" />

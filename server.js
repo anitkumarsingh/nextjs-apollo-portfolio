@@ -10,7 +10,7 @@ const handle = app.getRequestHandler();
 
 const data = [
   {
-    _id: 'asd213ad23s',
+    _id: 'asd213adqww23s',
     jobTitle: 'Job in India',
     location: 'Bengaluru',
     description: 'This is nice job',
@@ -26,7 +26,7 @@ const data = [
     experienceCount: 123
   },
   {
-    _id: 'asd213ad23s',
+    _id: 'asd213adsdfsd23s',
     jobTitle: 'Job in Toronto',
     location: 'Toronto',
     description: 'This is nice job',
@@ -49,14 +49,17 @@ app.prepare().then(() => {
     }
     type Query {
       portfolios:[Portfolios]
-      portfolio:Portfolios
+      portfolio(id:ID):Portfolios
     }
   `);
 
   const root = {
     hello: () => 'Hello world!',
     portfolios: () => data,
-    portfolio: () => data[0]
+    portfolio: ({ id }) => {
+      const portfolio = data.find((p) => p._id === id);
+      return portfolio;
+    }
   };
   server.use(
     '/graphql',
