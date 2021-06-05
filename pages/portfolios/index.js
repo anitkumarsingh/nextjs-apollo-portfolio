@@ -2,6 +2,8 @@
 import axios from 'axios';
 
 import Navbar from '../../components/Block/Navbar';
+import PortfolioCard from '../../components/Common/Portfolio/Card';
+import { query } from '../../queries';
 
 export const PortfolioItems = ({ data }) => {
   return (
@@ -19,20 +21,7 @@ export const PortfolioItems = ({ data }) => {
             data.map((p) => {
               return (
                 <div className="col-md-4" key={p._id}>
-                  <div className="card subtle-shadow no-border">
-                    <div className="card-body">
-                      <h5 className="card-title">{p.jobTitle}</h5>
-                      <h6 className="card-subtitle mb-2 text-muted">
-                        Location {p.location}
-                      </h6>
-                      <p className="card-text fs-2">{p.description}</p>
-                    </div>
-                    <div className="card-footer no-border">
-                      <small className="text-muted">
-                        Last updated 3 mins ago
-                      </small>
-                    </div>
-                  </div>
+                  <PortfolioCard p={p} />
                 </div>
               );
             })}
@@ -50,17 +39,6 @@ export const PortfolioItems = ({ data }) => {
 };
 
 const fetchPortfolios = async () => {
-  const query = `
-  query Portfolios {
-    portfolios {
-      _id,
-      jobTitle ,
-      location ,
-      experienceCount,
-      description,
-      isCurrentlyEmployee
-    }}
-`;
   const result = await axios.post('http://localhost:3000/graphql', { query });
   return result.data.data;
 };
