@@ -49,14 +49,17 @@ app.prepare().then(() => {
     }
     type Query {
       portfolios:[Portfolios]
-      portfolio:Portfolios
+      portfolio(id:ID):Portfolios
     }
   `);
 
   const root = {
     hello: () => 'Hello world!',
     portfolios: () => data,
-    portfolio: () => data[0]
+    portfolio: ({ id }) => {
+      const portfolio = data.find((p) => p._id === id);
+      return portfolio;
+    }
   };
   server.use(
     '/graphql',
