@@ -1,8 +1,15 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Card = ({ p }) => {
   return (
-    <>
+    <Link
+      href={{
+        pathname: '/portfolios/portfolio',
+        query: { id: p._id }
+      }}
+      as={`/portfolios/portfolio/${p._id}`}
+    >
       <div className="card subtle-shadow no-border">
         <div className="card-body">
           <h5 className="card-title">{p.jobTitle}</h5>
@@ -15,7 +22,7 @@ const Card = ({ p }) => {
           <small className="text-muted">Last updated 3 mins ago</small>
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 

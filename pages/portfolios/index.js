@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Navbar from '../../components/Block/Navbar';
 import PortfolioCard from '../../components/Common/Portfolio/Card';
+import { BASE_URL } from '../../constants/api';
 import { query } from '../../queries';
 
 export const PortfolioItems = ({ data }) => {
@@ -39,7 +40,7 @@ export const PortfolioItems = ({ data }) => {
 };
 
 const fetchPortfolios = async () => {
-  const result = await axios.post('http://localhost:3000/graphql', { query });
+  const result = await axios.post(`${BASE_URL}`, { query });
   return result.data.data;
 };
 const Portfolios = ({ portfolioData }) => {
@@ -52,14 +53,7 @@ const Portfolios = ({ portfolioData }) => {
     </>
   );
 };
-// Portfolios.getInitialProps = async () => {
-// return {
-// props: {
-// portfolioData: 'Some data...'
-// }
-// };
-//
-// };
+
 export const getStaticProps = async () => {
   const res = await fetchPortfolios();
   const { portfolios } = res;

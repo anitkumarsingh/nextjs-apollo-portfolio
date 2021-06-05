@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-import Layout from '../../components/Block/Layout';
+import Layout from '../../../components/Block/Layout';
 
 const PortofolioDetail = () => {
   const router = useRouter();
