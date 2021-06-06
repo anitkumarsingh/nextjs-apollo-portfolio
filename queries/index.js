@@ -10,10 +10,12 @@ export const query = `
     }}
 `;
 
-export const portfolio = `query Portfolio{
-  portfolio(id:"asd213ad23s"){
-    _id,
-   jobTitle,
-    description
-  }
-}`;
+export const portfolioById = (id) => {
+  return `query Portfolio(${id}){
+    portfolio(id:${id}){
+      _id,
+     jobTitle,
+      description
+    }
+  }`;
+};

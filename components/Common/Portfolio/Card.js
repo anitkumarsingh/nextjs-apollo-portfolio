@@ -5,10 +5,10 @@ const Card = ({ p }) => {
   return (
     <Link
       href={{
-        pathname: '/portfolios/portfolio',
+        pathname: '/portfolios/[id]',
         query: { id: p._id }
       }}
-      as={`/portfolios/portfolio/${p._id}`}
+      as={`/portfolios/${p._id}`}
     >
       <div className="card subtle-shadow no-border">
         <div className="card-body">
