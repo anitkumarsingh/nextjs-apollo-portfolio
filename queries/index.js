@@ -12,7 +12,7 @@ export const query = `
 
 export const portfolioById = (id) => {
   return `query Portfolio(${id}){
-    portfolio(id:${id}){
+    portfolio(id:"${id}"){
       _id,
      jobTitle,
       description

@@ -1,5 +1,20 @@
-import Layout from '../../components/Block/Layout';
+import axios from 'axios';
 
+import Layout from '../../components/Block/Layout';
+import { BASE_URL } from '../../constants/api';
+// import { portfolioById } from '../../queries';
+
+const fetchPortfolios = async (id) => {
+  const query = `query Portfolio(${id}){
+    portfolio(id:"${id}"){
+      _id,
+     jobTitle,
+      description
+    }
+  }`;
+  const result = await axios.post(`${BASE_URL}`, { query });
+  return result.data.data;
+};
 const PortofolioDetail = () => {
   return (
     <Layout>
@@ -47,8 +62,9 @@ const PortofolioDetail = () => {
   );
 };
 export const getStaticProps = async (context) => {
-  console.log('context', context);
-
+  console.log('context', context.params.id);
+  const result = await fetchPortfolios(context.params.id);
+  console.log('res', result);
   return { props: 'asadas' };
 };
 export async function getStaticPaths() {

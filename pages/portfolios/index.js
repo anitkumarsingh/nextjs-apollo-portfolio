@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/no-unescaped-entities */
 import axios from 'axios';
+import Link from 'next/link';
 
 import Navbar from '../../components/Block/Navbar';
 import PortfolioCard from '../../components/Common/Portfolio/Card';
@@ -22,7 +24,11 @@ export const PortfolioItems = ({ data }) => {
             data.map((p) => {
               return (
                 <div className="col-md-4" key={p._id}>
-                  <PortfolioCard p={p} />
+                  <Link href="/portfolios/[id]" as={`/portfolios/${p._id}`}>
+                    <a className="card-link">
+                      <PortfolioCard p={p} />
+                    </a>
+                  </Link>
                 </div>
               );
             })}
