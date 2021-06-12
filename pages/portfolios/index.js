@@ -24,7 +24,7 @@ export const PortfolioItems = ({ data }) => {
             data.map((p) => {
               return (
                 <div className="col-md-4" key={p._id}>
-                  <Link href="/portfolios/[id]" as={`/portfolios/${p._id}`}>
+                  <Link href="/portfolio/[id]" as={`/portfolio/${p._id}`}>
                     <a className="card-link">
                       <PortfolioCard p={p} />
                     </a>
