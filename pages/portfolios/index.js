@@ -35,9 +35,11 @@ export const PortfolioItems = ({ data }) => {
           <div className="col-md-12">
             <br />
             <br />
-            <a href="/" className="btn btn-main bg-blue ttu">
+<Link href="portfolios">
+            <a className="btn btn-main bg-blue ttu">
               See More Portfolios
             </a>
+</Link>
           </div>
         </div>
       </section>
